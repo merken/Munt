@@ -1,0 +1,60 @@
+version: '3'
+services:
+    
+    nuget.server:
+        image: "loicsharma/baget:latest"
+        container_name: nuget.server
+        ports:
+            - 8080:80
+        environment:
+            - NUGET_API_KEY
+
+    storage.emulator:
+        image: "mcr.microsoft.com/azure-storage/azurite:latest"
+        container_name: storage.emulator
+        ports:
+            - 10000:10000
+            - 10001:10001
+        depends_on:
+            - nuget.server
+
+    leasecalc.spinup:
+        container_name: munt.spinup
+        build:
+            context: .
+            dockerfile: spin-up.Dockerfile
+        environment:
+            - AzureWebJobsStorage
+        depends_on:
+            - storage.emulator
+
+    leasecalc.insurance.api:
+        container_name: munt.insurance.api
+        build:
+            context: .
+            dockerfile: insurance.api.Dockerfile
+        ports:
+            - 5000:5000
+
+    leasecalc.functions:
+        container_name: leasecalc.functions
+        build:
+            context: .
+            dockerfile: functions.Dockerfile
+        ports:
+            - 80:80
+        environment:
+            - AzureWebJobsStorage
+            - InsuranceApi
+            - NuGetEndpoint
+            - SendGridAPIKey
+            - SendGridFromAddress
+            - AZURE=true
+        depends_on:
+            - storage.emulator
+            - nuget.server
+            - leasecalc.insurance.api
+        links:
+            - leasecalc.insurance.api
+            - storage.emulator
+            - nuget.server
