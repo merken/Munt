@@ -18,7 +18,7 @@ services:
         depends_on:
             - nuget.server
 
-    leasecalc.spinup:
+    munt.spinup:
         container_name: munt.spinup
         build:
             context: .
@@ -28,16 +28,16 @@ services:
         depends_on:
             - storage.emulator
 
-    leasecalc.insurance.api:
-        container_name: munt.insurance.api
+    munt.insurance.api:
+        container_name: munt.advances.api
         build:
             context: .
-            dockerfile: insurance.api.Dockerfile
+            dockerfile: advances.api.Dockerfile
         ports:
             - 5000:5000
 
-    leasecalc.functions:
-        container_name: leasecalc.functions
+    munt.functions:
+        container_name: munt.functions
         build:
             context: .
             dockerfile: functions.Dockerfile
@@ -53,8 +53,8 @@ services:
         depends_on:
             - storage.emulator
             - nuget.server
-            - leasecalc.insurance.api
+            - munt.insurance.api
         links:
-            - leasecalc.insurance.api
+            - munt.insurance.api
             - storage.emulator
             - nuget.server
