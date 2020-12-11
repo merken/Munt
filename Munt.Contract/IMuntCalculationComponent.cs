@@ -17,7 +17,7 @@ namespace Munt.Contract
         /// 
         /// </summary>
         /// <param name="context">The general context, this contains information regarding the employee, employer and the performances delivered by that employee for the employer.</param>
-        /// <param name="calculationContext">The context for the current calculation area.
+        /// <param name="componentContext">The context for the current calculation component.
         /// These areas can be :
         /// - Wage
         /// - Bruto
@@ -27,6 +27,6 @@ namespace Munt.Contract
         /// In case the amount needs to be adjusted (addition, subtraction), the implementation is allowed to do so.
         /// </param>
         /// <returns>A calculation result, which translates in a line on the employee payslip.</returns>
-        Task<List<CalculationResult>> Calculate(MuntContext context, CalculationContext calculationContext);
+        Task<List<CalculationResult>> Calculate(MuntContext context, ComponentContext componentContext);
     }
 }

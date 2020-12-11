@@ -1,0 +1,11 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=leasecalcstorage;AccountKey=A0jPgLV42OZ/IJT/gZkWYzTmW7ePMyF8MKk76/idp8JWP/uZV5t0ilIz2LwZU785HCzYy74u8wvTKT7KZMqBAg==;EndpointSuffix=core.windows.net",
+        "InsuranceApi": "https://leasecalc-insurance.azurewebsites.net",
+        "NuGetEndpoint": "https://bagetondocker.azurewebsites.net/v3/index.json",
+        "SendGridAPIKey":"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",
+        "SendGridFromAddress":"info@leasecalc.com",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+    }
+}

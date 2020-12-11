@@ -1,0 +1,1 @@
+ls _dist/*.nupkg | xargs -I {} sh -c "dotnet nuget push -s http://localhost:8080/v3/index.json --skip-duplicate {}"

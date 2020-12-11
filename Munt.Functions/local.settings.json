@@ -1,0 +1,11 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+        "Advances:BaseUrl": "https://localhost:5001/advances",
+        "NuGetEndpoint": "http://localhost:8080/v3/index.json",
+        "SendGridAPIKey":"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",
+        "SendGridFromAddress":"merken.maarten@gmail.com",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+    }
+}

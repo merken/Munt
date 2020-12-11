@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>Wage.BlueCollarWageComponent</id>
+        <title>Wage.BlueCollarWageComponent</title>
+        <version>1.0.0</version>
+        <authors>Maarten Merken</authors>
+        <owners>Maarten Merken</owners>
+        <description>Wage.BlueCollarWageComponent</description>
+        <copyright>Copyright Munt 2020</copyright>
+        <tags>Wage</tags>
+        <icon>icon.png</icon>
+    </metadata>
+    <files>
+        <file src="bin/Debug/net5.0/publish/*.*" target="lib/net5.0" />
+        <file src="../icon.png" target="icon.png" />
+    </files>
+</package>

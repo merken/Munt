@@ -1,0 +1,73 @@
+{
+  "journey": {
+    "description": "Munt Calculation Journey for blue collar worker v1",
+    "areas": [
+      {
+        "order": 100,
+        "description": "Wages",
+        "components": [
+          {
+            "order": 100,
+            "description" : "Basisloon berekening bediende 100%",
+            "type": "Wage.BlueCollarWageComponent",
+            "version": "1.0.0"
+          }
+        ]
+      },
+      {
+        "order": 200,
+        "description": "Bruto",
+        "components": [
+          {
+            "order": 100,
+            "description" : "RSZ -13.07%",
+            "type": "Bruto.SocialSecurityComponent",
+            "version": "1.0.0"
+          },
+          {
+            "order": 200,
+            "description" : "Social work bonus",
+            "type": "Bruto.SocialWorkBonusComponent",
+            "version": "1.0.0"
+          }
+        ]
+      },
+      {
+        "order": 300,
+        "description": "Taxable",
+        "components": [
+          {
+            "order": 100,
+            "description" : "Bedrijfsvoorheffing",
+            "type": "Taxable.WithholdingTaxOnProfessionalIncomeMonthlyComponent",
+            "version": "1.0.0"
+          },
+          {
+            "order": 200,
+            "description" : "Vermindering BV voor lage lonen",
+            "type": "Taxable.DeductionForSmallWagesComponent",
+            "version": "1.0.0"
+          },
+          {
+            "order": 300,
+            "description" : "Fiscale werkbonus",
+            "type": "Taxable.FiscalWorkBonusComponent",
+            "version": "1.0.0"
+          }
+        ]
+      },
+      {
+        "order": 400,
+        "description": "Netto",
+        "components": [
+          {
+            "order": 100,
+            "description" : "Voorschotten",
+            "type": "Netto.AdvancesComponent",
+            "version": "1.0.0"
+          }
+        ]
+      }
+    ]
+  }
+}

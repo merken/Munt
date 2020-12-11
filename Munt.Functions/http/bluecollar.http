@@ -1,0 +1,238 @@
+# Use this endpoint when running on Docker
+# POST http://localhost/api/StartCalc/journey.v1
+# Use this endpoint when running locally (F5 Debugging)
+# POST http://localhost:7071/api/StartCalc/journey.v1
+# Use this endpoint to trigger this on Azure
+POST https://leasecalc.azurewebsites.net/api/StartCalc/journey.whitecollar.v1
+Content-Type: application/json
+
+{
+  "employeeInformation": {
+    "id": 20,
+    "firstName": "Peter",
+    "lastName": "Petersen",
+    "employeeType": "BlueCollar",
+    "email": "merken.maarten@gmail.com"
+  },
+  "employerInformation": {
+    "id": 123456
+  },
+  "performanceInformation": {
+    "baseSalary": 2500.00,
+    "performanceBaseline": 23.00,
+    "contractualHoursPerDay": 8.0,
+    "performances": [
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"        
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "020",
+        "description": "Less than a full working day",
+        "days": 1.0,
+        "hours": 6.0,
+        "amount": 6.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "020",
+        "description": "Less than a full working day",
+        "days": 1.0,
+        "hours": 6.0,
+        "amount": 6.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "020",
+        "description": "Less than a full working day",
+        "days": 1.0,
+        "hours": 6.0,
+        "amount": 6.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "020",
+        "description": "Less than a full working day",
+        "days": 1.0,
+        "hours": 6.0,
+        "amount": 6.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "020",
+        "description": "Less than a full working day",
+        "days": 1.0,
+        "hours": 6.0,
+        "amount": 6.0,
+        "value": 12.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "030",
+        "description": "Paid holiday",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 12.0,
+        "type": "Holiday"
+      }
+    ]
+  },
+  "calculationInformation": {
+    "startDate": "2020-11-01T00:00:00.000Z",
+    "endDate": "2020-12-01T00:00:00.000Z"
+  }
+}

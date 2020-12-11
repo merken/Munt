@@ -1,0 +1,386 @@
+# Use this endpoint when running on Docker
+# POST http://localhost/api/StartCalc/journey.v1
+# Use this endpoint when running locally (F5 Debugging)
+ POST http://localhost:7071/api/StartCalc/journey.whitecollar.v1
+# Use this endpoint to trigger this on Azure
+#POST https://munt.azurewebsites.net/api/StartCalc/journey.whitecollar.v1
+Content-Type: application/json
+
+{
+  "employeeInformation": {
+    "id": 10,
+    "firstName": "Maarten",
+    "lastName": "Merken",
+    "employeeType": "WhiteCollar",
+    "email": "merken.maarten@gmail.com"
+  },
+  "employerInformation": {
+    "id": 123456
+  },
+  "performanceInformation": {
+    "baseSalary": 2500.00,
+    "performanceBaseline": 23.00,
+    "contractualHoursPerDay": 8.0,
+    "performances": [
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"        
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "001",
+        "description": "Normal working day",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "BusinessDay"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "010",
+        "description": "Bruto day compensation for working outside of office",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "value": 14.0,
+        "type": "BusinessDayOnSite"
+      },
+      {
+        "code": "100",
+        "description": "Paid illness",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "Illness"
+      },
+      {
+        "code": "100",
+        "description": "Paid illness",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "Illness"
+      },
+      {
+        "code": "100",
+        "description": "Paid illness",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "Illness"
+      },
+      {
+        "code": "100",
+        "description": "Paid illness",
+        "days": 1.0,
+        "hours": 8.0,
+        "amount": 8.0,
+        "type": "Illness"
+      }
+    ]
+  },
+  "calculationInformation": {
+    "startDate": "2020-11-01T00:00:00.000Z",
+    "endDate": "2020-12-01T00:00:00.000Z"
+  }
+}
