@@ -1,8 +1,0 @@
-POST http://localhost:80/advances
-Content-Type: application/json
-
-{
-    "employeeId": 1,
-    "amount": 1000,
-    "paidOn": "2020-11-01T00:00:00"
-}

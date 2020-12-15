@@ -1,0 +1,10 @@
+GET http://localhost:5000/advances/10
+
+POST http://localhost:5000/advances
+Content-Type: application/json
+
+{
+    "employeeId": 10,
+    "amount": 1000,
+    "paidOn": "2020-11-20T00:00:00"
+}
