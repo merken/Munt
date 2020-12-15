@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using System.Text;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
@@ -39,10 +41,18 @@ namespace Munt.Functions
             {
                 new EmailAddress(emailMessage.EmailAddress)
             };
+
+            var result = emailMessage.CalculationResults.Sum(c=>c.Value);
+            var period = $"{emailMessage.StartDate.ToShortDateString()} - {emailMessage.EndDate.AddDays(-1).ToShortDateString()}";
             msg.AddTos(recipients);
-            msg.SetSubject($"Payslip for {emailMessage.Employee} {emailMessage.Result}");
+            msg.SetSubject($"Payslip for {emailMessage.Employee} for {period}");
+
+            var rowBuilder= new StringBuilder();
+            foreach(var row in emailMessage.CalculationResults.Select(c=> $"<tr><td>{c.Code}</td><td>{c.Description}</td><td>{c.Value}</td></tr>"))
+                rowBuilder.AppendLine(row);
+            var resultLine =  $"<tr><td colspan='3'>Total:</td><td>{result}</td></tr>";
             msg.AddContent(MimeType.Html,
-                $"<pre id=\"json\">{emailMessage.Journey}</pre><script type=\"text/javascript\">document.getElementById(\"json\").innerHTML = JSON.stringify(data, undefined, 2);</script>");
+                $@"<html><body><h3>Payslip for {emailMessage.Employee}</h3><div><table><tr><th>Code</th><th>Description</th><th>Value</th></tr>{rowBuilder}{resultLine}</table></div><div>Booked onto your bankaccount: {result}</div></body></html>");
             var response = await client.SendEmailAsync(msg);
             if (response.StatusCode != HttpStatusCode.Accepted && response.StatusCode != HttpStatusCode.OK)
             {

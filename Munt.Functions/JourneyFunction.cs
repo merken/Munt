@@ -74,14 +74,14 @@ namespace Munt.Functions
                 intermediateResult = amountForCalculationArea;
             }
 
-            var result = calculationResults.Sum(c => c.Value);
             // At the end, send an email with the results
             emailQueue.Add(JsonConvert.SerializeObject(new EmailMessage
             {
                 Employee = $"{journeyMessage.Context.EmployeeInformation.FirstName} {journeyMessage.Context.EmployeeInformation.LastName}",
+                StartDate = journeyMessage.Context.CalculationInformation.StartDate.Date,
+                EndDate = journeyMessage.Context.CalculationInformation.EndDate.Date,
                 EmailAddress = journeyMessage.Context.EmployeeInformation.Email,
-                Result = result.ToString(),
-                Journey = message,
+                CalculationResults = calculationResults.ToArray(),
             }));
         }
 
